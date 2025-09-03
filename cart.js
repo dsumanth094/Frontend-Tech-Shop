@@ -57,14 +57,14 @@ cartContainer.appendChild(itemsWrapper);
     cartContainer.appendChild(summary);
   }
 }
-
+// Items Increased
 function increaseQuantity(index) {
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
   cart[index].quantity += 1;
   localStorage.setItem("cart", JSON.stringify(cart));
   renderCart();
 }
-
+// Items Decreased
 function decreaseQuantity(index) {
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
   if (cart[index].quantity > 1) {
@@ -75,16 +75,17 @@ function decreaseQuantity(index) {
   localStorage.setItem("cart", JSON.stringify(cart));
   renderCart();
 }
-
+// Items Remove Function
 function removeItem(index) {
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
   cart.splice(index, 1);
   localStorage.setItem("cart", JSON.stringify(cart));
   renderCart();
 }
-
+// Check Function and get Alert Meassage
 function checkout() {
   alert("Proceeding to checkout...");
 }
 
 window.onload = renderCart;
+// Add to cart Function End

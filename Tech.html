@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <title>Tech-Shop</title>
+    <link rel="stylesheet" href="./Tech.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="header1">
+        <header>
+            <h4>Tech-Shop</h4>
+            <nav>
+                <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                <a href="./cart.html" class="cart-link">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span id="cart-count" class="cart-count">0</span>
+                </a>
+                <a href="#"><i class="fa-solid fa-user"></i></a>
+            </nav>
+        </header>
+    </div>
+
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <p class="about"> JBC Live 660NC</p>
+      <h2 class="about1">Keep The Noise Out,<br> Or In. You Choose.</h2>
+      <p class="about2">₹9,999 <s>₹14,999</s></p>
+      <button class="shop-now">Shop-now</button>
+      <img id="d" src="./images/products/jbl660nc-1.png" class="d-block " alt="...">
+    </div>
+    <div class="carousel-item">
+      <p class="about"> boAt Airpodes 131</p>
+      <h2 class="about1">Featherweight For<br>Comfort All-Day.</h2>
+      <p class="about2">₹1,099 <s>₹2,990</s></p>
+      <button class="shop-now">Shop-now</button>
+      <img id="d" src="./images/products/boat131-3.png" class="d-block " alt="...">
+    </div>
+    <div class="carousel-item">
+      <p class="about"> Sony WH-XB910N</p>
+      <h2 class="about1">Give Your Favourite<br>Music A Boost.</h2>
+      <p class="about2">₹13,489 <s>₹19,990</s></p>
+      <button class="shop-now">Shop-now</button>
+      <img id="d" src="./images/products/sonyXb910n-1.png" class="d-block" alt="...">
+    </div>
+  </div>
+</div>
+
+<!-- Feature products start  -->
+
+<div class="head">
+  <h2>Featured Products</h2>
+</div>
+
+<div class="carousel-wrapper">
+  <!-- Left Button -->
+  <button class="carousel-btn prev">&#10094;</button>
+
+  <!-- Track -->
+  <div class="feature" id="carouselTrack">
+    <div class="feature1">
+      <p>boAt Rockerz 518</p>
+      <img class="image" src="./images/products/boat518-1.png" alt="">
+      <p class="price">₹1,299 <s>₹3,990</s></p>
+    </div>
+
+    <div class="feature1">
+      <p>JBL Tune 760NC</p>
+      <img class="image" src="./images/products/jbl760nc-1.png" alt="">
+      <p class="price">₹5,999 <s>₹7,999</s></p>
+    </div>
+
+    <div class="feature1">
+      <p>boAt Rockerz 255</p>
+      <img class="image" src="./images/products/boat255r-1.png" alt="">
+      <p class="price">₹899 <s>₹2,990</s></p>
+    </div>
+
+    <div class="feature1">
+      <p>boAt Airdopes 203</p>
+      <img class="image" src="./images/products/boat203-1.png" alt="">
+      <p class="price">₹1,074 <s>₹3,999</s></p>
+    </div>
+
+    <div class="feature1">
+      <p>JBL Endurance Run Sports</p>
+      <img class="image" src="./images/products/jbl-endu-1.png" alt="">
+      <p class="price">₹999 <s>₹1,599</s></p>
+    </div>
+  </div>
+
+  <!-- Right Button -->
+  <button class="carousel-btn next">&#10095;</button>
+</div>
+
+<!-- Feature products End  -->
+
+<div class="head1"><h2>Top Products</h2></div>
+<div class="sidehead">
+  <button class="sidehead1" onclick="filterProducts('all')">All</button>
+  <button class="sidehead2" onclick="filterProducts('headphones')">HeadPhones</button>
+  <button class="sidehead2" onclick="filterProducts('earbuds')">Earbuds</button>
+  <button class="sidehead2" onclick="filterProducts('earphones')">Earphones</button>
+  <button class="sidehead2" onclick="filterProducts('neckbands')">Neckbands</button>
+</div>
+
+<div class="products-list">
+  <div class="item-list headphones">
+    <img class="image-products" src="./images/products/jbl660nc-1.png"><br>
+    <span class="star1">★</span>
+    <span class="star">★</span>
+    <span class="star">★</span>
+    <span class="star">★</span>
+    <span class="star">★</span>
+    <p class="products-name">JBL Live 660NC</p>
+    <p class="products-name1">Wireless Over-Ear NC Headphones</p>
+    <hr class="line">
+    <p class="products-price">₹9999  <s>₹14,999</s></p>
+    <p class="cart-button"> <a href="#" onclick="addToCart('JBL Live 660NC', 'Wireless Over-Ear NC Headphones', 9999, './images/products/jbl660nc-1.png')">Add to Cart</a></p>
+  </div>
+
+  <div class="item-list headphones">
+    <img class="image-products" src="./images/products/boat518-1.png"><br>
+    <span class="star1">★</span>
+    <span class="star">★</span>
+    <span class="star">★</span>
+    <span class="star">★</span>
+    <span class="star">★</span>
+    <p class="products-name">boAt Rockerz518</p>
+    <p class="products-name1">On-Ear Wireless Headphones</p>
+    <hr class="line">
+    <p class="products-price">₹1299  <s>₹3990</s></p>
+    <p class="cart-button"><a href="#" onclick="addToCart('boAt Rockerz518', 'On-Ear Wireless Headphones', 1299, './images/products/boat518-1.png')">Add to Cart</a></p>
+  </div>
+
+  <div class="item-list earbuds">
+    <img class="image-products" src="./images/products/boat131-1.png"><br>
+    <span class="star1">★</span>
+    <span class="star">★</span>
+    <span class="star">★</span>
+    <span class="star">★</span>
+    <span class="star">★</span>
+    <p class="products-name">boAt Airpodes 131</p>
+    <p class="products-name1">Wireless in-Ear Earbuds</p>
+    <hr class="line">
+    <p class="products-price">₹1099  <s>₹2990</s></p>
+    <p class="cart-button"><a href="#" onclick="addToCart('boAt Airpodes 131', 'Wireless in-Ear Earbuds', 1099, './images/products/boat131-1.png')">Add to Cart</a></p>
+  </div>
+
+  <div class="item-list earphones">
+    <img class="image-products" src="./images/products/boat110-1.png"><br>
+    <span class="star1">★</span>
+    <span class="star">★</span>
+    <span class="star">★</span>
+    <span class="star">★</span>
+    <span class="star">★</span>
+    <p class="products-name">boAt BassHeads 110</p>
+    <p class="products-name1">In-Ear Wired Earphones</p>
+    <hr class="line">
+    <p class="products-price">₹449  <s>₹999</s></p>
+    <p class="cart-button"><a href="#" onclick="addToCart('boAt BassHeads 110', 'In-Ear Wired Earphones', 449, './images/products/boat110-1.png')">Add to Cart</a></p>
+  </div>
+
+  <div class="item-list headphones">
+    <img class="image-products" src="./images/products/boat410-1.png"><br>
+    <span class="star1">★</span>
+    <span class="star">★</span>
+    <span class="star">★</span>
+    <span class="star">★</span>
+    <span class="star">★</span>
+    <p class="products-name">boAt Rockerz 410</p>
+    <p class="products-name1">Bluetooth & Wired On-Ear Headphones</p>
+    <hr class="line">
+    <p class="products-price">₹1599  <s>₹2990</s></p>
+    <p class="cart-button"><a href="#" onclick="addToCart('boAt Rockerz 410', 'Bluetooth & Wired On-Ear Headphones', 1599, './images/products/boat410-1.png')">Add to Cart</a></p>
+  </div>
+
+  <div class="item-list neckbands">
+    <img class="image-products" src="./images/products/jbl200bt-1.png"><br>
+    <span class="star1">★</span>
+    <span class="star">★</span>
+    <span class="star">★</span>
+    <span class="star">★</span>
+    <span class="star">★</span>
+    <p class="products-name">JBL Live 200BT</p>
+    <p class="products-name1">In-Ear Wireless Neckbands</p>
+    <hr class="line">
+    <p class="products-price">₹3,699  <s>₹5,299</s></p>
+    <p class="cart-button"><a href="#" onclick="addToCart('JBL Live 200BT', 'In-Ear Wireless Neckbands', 3699, './images/products/jbl200bt-1.png')">Add to Cart</a></p>
+  </div>
+
+  <div class="item-list headphones">
+    <img class="image-products" src="./images/products/sonyXb910n-1.png"><br>
+    <span class="star1">★</span>
+    <span class="star">★</span>
+    <span class="star">★</span>
+    <span class="star">★</span>
+    <span class="star">★</span>
+    <p class="products-name">Sony WH-XB910N</p>
+    <p class="products-name1">Wireless Over-Ear Headphones</p>
+    <hr class="line">
+    <p class="products-price">₹13,489  <s>₹19,990</s></p>
+    <p class="cart-button"><a href="#"onclick="addToCart('Sony WH-XB910N', 'Wireless Over-Ear Headphones', 13489, './images/products/sonyXb910n-1.png')">Add to Cart</a></p>
+  </div>
+
+  <div class="item-list">
+    <img class="image-products" src="./images/products/jbl760nc-1.png"><br>
+    <span class="star1">★</span>
+    <span class="star">★</span>
+    <span class="star">★</span>
+    <span class="star">★</span>
+    <span class="star">★</span>
+    <p class="products-name">JBL Tune 760NC</p>
+    <p class="products-name1">Wireless Over-Ear NC Headphones</p>
+    <hr class="line">
+    <p class="products-price">₹5,999  <s>₹7,999</s></p>
+    <p class="cart-button"> <a href="#" onclick="addToCart('JBL Tune 760NC', 'Wireless Over-Ear NC Headphones', 5999, './images/products/jbl760nc-1.png')">Add to Cart</a></p>
+  </div>
+
+  <div class="item-list neckbands">
+    <img class="image-products" src="./images/products/boat255r-1.png"><br>
+    <span class="star1">★</span>
+    <span class="star">★</span>
+    <span class="star">★</span>
+    <span class="star">★</span>
+    <span class="star">★</span>
+    <p class="products-name">boAt Rockerz 255</p>
+    <p class="products-name1">In-Ear Wireless Neckbands</p>
+    <hr class="line">
+    <p class="products-price">₹899  <s>₹2990</s></p>
+    <p class="cart-button"> <a href="#" onclick="addToCart('boAt Rockerz 255', 'In-Ear Wireless Neckbands', 899, './images/products/boat255r-1.png')">Add to Cart</a></p>
+  </div>
+
+  <div class="item-list earbuds">
+    <img class="image-products" src="./images/products/jbl100-1.png"><br>
+    <span class="star1">★</span>
+    <span class="star">★</span>
+    <span class="star">★</span>
+    <span class="star">★</span>
+    <span class="star">★</span>
+    <p class="products-name">JBL Wave 100</p>
+    <p class="products-name1">In-Ear Truly Wireless Earbuds</p>
+    <hr class="line">
+    <p class="products-price">₹2,999  <s>₹6,999</s></p>
+    <p class="cart-button"> <a href="#" onclick="addToCart('JBL Wave 100', 'In-Ear Truly Wireless Earbuds', 2999, './images/products/jbl100-1.png')">Add to Cart</a></p>
+  </div>
+
+  <div class="item-list headphones">
+    <img class="image-products" src="./images/products/sony1000xm4-1.png"><br>
+    <span class="star1">★</span>
+    <span class="star">★</span>
+    <span class="star">★</span>
+    <span class="star">★</span>
+    <span class="star">★</span>
+    <p class="products-name">Sony WF-1000XM4</p>
+    <p class="products-name1">Wireless In-Ear NC Headphones</p>
+    <hr class="line">
+    <p class="products-price">₹19,990  <s>₹24,990</s></p>
+    <p class="cart-button"><a href="#" onclick="addToCart('Sony WF-1000XM4', 'Wireless In-Ear NC Headphones', 19990, './images/products/sony1000xm4-1.png')">Add to Cart</a></p>
+  </div>
+
+  <div class="item-list1">
+    <p class="item-list2">Browse All<br> Products&#8594;</p>
+  </div>
+</div>
+<div class="our-advantages"><h5>Our Advantages</h5>
+<div class="advantages-details">
+  <i class="fa-solid fa-truck-fast"></i>
+  <p class="details">Express Delivery</p>
+  <p class="details-sub">Ships in 24 Hours</p>
+
+  <i class="fa-solid fa-shield-halved"></i>
+  <p class="details">Brand Warranty</p>
+  <p class="details-sub">100% Original Products</p>
+
+  <i class="fa-solid fa-tags"></i>
+  <p class="details">Exciting Deals</p>
+  <p class="details-sub1">On all prepaid orders</p>
+
+  <i class="fa-solid fa-credit-card"></i>
+  <p class="details">Secure Payments</p>
+  <p class="details-sub" style="margin-left: -120px;">SSL/Secure certificate</p>
+</div>
+</div>
+<footer>
+  <div class="footer">
+    <div class="footer-section">
+      <p class="footer-details"><b>Tech-Shop</b></p>
+      <p class="footer-detailssub">Subscribe to our Email alerts to receive early discounts offers,<br>and new products info. </p>
+      <input type="email" class="email" placeholder="Email Address*"><br>
+      <button class="Subscribe">Subscribe</button>
+      
+      <div class="Help-details">
+      <ol>
+        <li class="help2"><b>Help</b></li>
+        <li class="help">FAQs</li>
+        <li class="help1">Track Order</li>
+        <li class="help1">Cancel Order</li>
+        <li class="help1">Return Order</li>
+        <li class="help1">Warranty Info</li>
+      </ol>
+
+      <ol>
+        <li class="help2"><b>Policies</b></li>
+        <li class="help">Return Policy</li>
+        <li class="help1">Security</li>
+        <li class="help1">Sitemap</li>
+        <li class="help1">Privacy Policy</li>
+        <li class="help1">Terms & Conditions</li>
+      </ol>
+
+      <ol>
+        <li class="help2"><b>Company</b></li>
+        <li class="help">About Us</li>
+        <li class="help1">Contact Us</li>
+        <li class="help1">Service Centres</li>
+        <li class="help1">Careers</li>
+        <li class="help1">Affiliates</li>
+      </ol>
+    </div>
+    </div>
+    <hr class="line1">
+  </div>
+
+  <div class="All-Rights">
+    <p class="reserve">2025 | All Rights Reserved&copy;.</p>
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+    </div>
+  </div>
+</footer>
+<script src="./shop.js"></script>
+</body>
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+     <div class="header2">
+        <header>
+            <a href="./Tech.html"><h4>Tech-Shop</h4></a>
+            <nav>
+                <a href="#"><i class="fa-solid fa-magnifying-glass"></i></a>
+                <a href="#"><i class="fa-solid fa-cart-shopping"></i></a>
+                <a href="#"><i class="fa-solid fa-user"></i></a>
+            </nav>
+        </header>
+    </div>
+  <!-- <div class="cart-container">
+  <div id="cartItems"></div>
+
+  <div class="cart">
+    <p class="d"><b>Cart Summary<hr></b></p>
+    <p class="s">Total Price :</p>
+    <p class="d" id="totalPrice">$0.00</p>
+  </div>
+</div> -->
+<div class="cart-container" id="cartContainer">
+    <!-- Cart items will be inserted here with JS -->
+</div>
+
+<!-- Empty Cart Design -->
+<!-- <div id="emptyCart" class="cart1">
+  <i class="fa-solid fa-cart-shopping cart-icon"></i>
+  <p class="cross">X</p>
+</div> -->
+    <footer>
+  <div class="footer">
+    <div class="footer-section">
+      <p class="footer-details"><b>Tech-Shop</b></p>
+      <p class="footer-detailssub">Subscribe to our Email alerts to receive early discounts offers,<br>and new products info. </p>
+      <input type="email" class="email" placeholder="Email Address*"><br>
+      <button class="Subscribe">Subscribe</button>
+      
+      <div class="Help-details">
+      <ol>
+        <li class="help2"><b>Help</b></li>
+        <li class="help">FAQs</li>
+        <li class="help1">Track Order</li>
+        <li class="help1">Cancel Order</li>
+        <li class="help1">Return Order</li>
+        <li class="help1">Warranty Info</li>
+      </ol>
+
+      <ol>
+        <li class="help2"><b>Policies</b></li>
+        <li class="help">Return Policy</li>
+        <li class="help1">Security</li>
+        <li class="help1">Sitemap</li>
+        <li class="help1">Privacy Policy</li>
+        <li class="help1">Terms & Conditions</li>
+      </ol>
+
+      <ol>
+        <li class="help2"><b>Company</b></li>
+        <li class="help">About Us</li>
+        <li class="help1">Contact Us</li>
+        <li class="help1">Service Centres</li>
+        <li class="help1">Careers</li>
+        <li class="help1">Affiliates</li>
+      </ol>
+    </div>
+    </div>
+    <hr class="line1">
+  </div>
+
+  <div class="All-Rights">
+    <p class="reserve">2025 | All Rights Reserved&copy;.</p>
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+    </div>
+  </div>
+</footer>
+<script src="./cart.js"></script> 
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart Example</title>
+  <style>
+    .cart-container{
+      border: 1px solid whitesmoke;
+      background-color: whitesmoke;
+      height: 620px;
+      margin-top: 90px;
+    }
+    .carts{
+      border: 2px solid white;
+      border-radius: 10px;
+      background-color: white;
+      height: 151px;
+      width: 900px;
+      margin: 40px;
+      margin-left: 80px;
+    }
+    .c, .c1{
+      height: 150px;
+    }
+    .c1{ margin-left: 50px; }
+    h3{ margin-left: 300px; margin-top: -120px; }
+    h5{ font-size: 15px; padding-left: 300px; margin-top: 50px; color: gray; }
+    p{ font-size: 15px; padding-left: 380px; margin-top: -43px; color: darkblue; }
+    .b a{ text-decoration: none; color: black; border: 1px solid white; margin-left: 400px; font-size: 25px; }
+    .b{ padding-top: 5px; }
+    .b1 a{ text-decoration: none; color: black; border: 1px solid white; margin-left: 450px; font-size: 35px; }
+    .b1{ margin-top: -52px; }
+    h6{ margin-left: 850px; margin-top: -130px; }
+    h6 a{ text-decoration: none; font-size: 20px; color: black; }
+    .cart{ border: 2px solid white; border-radius: 10px; background-color: white; height: 150px; width: 350px; margin-left: 1050px; margin-top: -580px; }
+    .cart p{ margin-top: 10px; padding-inline-start: 20px; font-size: 20px; }
+    .d{ color: darkblue; }
+    .s{ color: black; }
+  </style>
+</head>
+<body>
+  <div id="app"></div>
+
+  <script>
+    const cartData = [
+      { img: "./Images/double-sofa-01.png", name: "Stone and Beam Westview", price: 193 },
+      { img: "./Images/double-sofa-02.png", name: "Rivet Bigelow Modern", price: 253 },
+      { img: "./Images/arm-chair-02.jpg", name: "Baltsar Chair", price: 89 }
+    ];
+
+    const container = document.createElement("div");
+    container.className = "cart-container";
+
+    // Create cart items
+    cartData.forEach((item, index) => {
+      const cart = document.createElement("div");
+      cart.className = "carts";
+
+      const img = document.createElement("img");
+      img.className = index === 2 ? "c1" : "c";
+      img.src = item.img;
+      cart.appendChild(img);
+
+      const title = document.createElement("h3");
+      title.textContent = item.name;
+      cart.appendChild(title);
+
+      const qtyPrice = document.createElement("h5");
+      qtyPrice.textContent = `$${item.price}.00*1`;
+      cart.appendChild(qtyPrice);
+
+      const total = document.createElement("p");
+      total.textContent = `$${item.price}.00`;
+      cart.appendChild(total);
+
+      const plus = document.createElement("p");
+      plus.className = "b";
+      plus.innerHTML = `<a href="#"><b>+</b></a>`;
+      cart.appendChild(plus);
+
+      const minus = document.createElement("p");
+      minus.className = "b1";
+      minus.innerHTML = `<a href="#">-</a>`;
+      cart.appendChild(minus);
+
+      const remove = document.createElement("h6");
+      remove.innerHTML = `<a href="#">X</a>`;
+      cart.appendChild(remove);
+
+      container.appendChild(cart);
+    });
+
+    // Cart summary
+    const summary = document.createElement("div");
+    summary.className = "cart";
+    summary.innerHTML = `
+      <p class="d"><b>Cart Summary<hr></b></p>
+      <p class="s">Total Price : </p>
+      <p class="d">$${cartData.reduce((sum, item) => sum + item.price, 0)}.00</p>
+    `;
+    container.appendChild(summary);
+
+    document.getElementById("app").appendChild(container);
+  </script> -->
+<!-- </body>
+</html> -->

@@ -17,7 +17,7 @@ function filterProducts(category) {
 
   filterProducts('all');
 
-
+// Add to cart function
 function addToCart(name, description, price, image) {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
     let existingItem = cart.find(item => item.name === name);
@@ -34,6 +34,8 @@ function addToCart(name, description, price, image) {
     btn.style.pointerEvents = "none"; 
     updateCartCount();
 }
+
+// Cart Icon Count 
 function updateCartCount() {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
     let count = cart.reduce((acc, item) => acc + item.quantity, 0);

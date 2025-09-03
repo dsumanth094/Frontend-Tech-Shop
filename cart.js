@@ -11,7 +11,7 @@ function renderCart() {
 cartItems.forEach((item, index) => {
     let itemTotal = item.price * item.quantity;
     originalPrice += itemTotal;
-    discount += itemTotal * 0.15; 
+    discount += itemTotal * 0.15; //discount  
     totalItems += item.quantity;
 cartContainer.innerHTML = "";
 // items added with structure

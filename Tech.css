@@ -178,6 +178,9 @@ nav a{
 .carousel-btn.next {
   right: 20px;
 }
+/* Feature Start */
+
+/* product start */
 
 .head1{
     text-align: center;
@@ -290,6 +293,9 @@ nav a{
     font-size: 25px;
     color: white;
 }
+/* product End */
+
+/* Advantage Start */
 
 .our-advantages{
     color: white;
@@ -327,6 +333,8 @@ nav a{
     margin-top: 80px;
 
 }
+/* Advantage End */
+/* Footer Start */
 .footer{
     margin-bottom: 50px;
     margin-top: 50px;
@@ -404,3 +412,4 @@ nav a{
     margin-left: 900px;
     margin-bottom: 80px;
 }
+/* Footer End */

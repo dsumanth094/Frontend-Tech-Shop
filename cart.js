@@ -10,13 +10,12 @@ function renderCart() {
   cartItems.forEach((item, index) => {
     let itemTotal = item.price * item.quantity;
     originalPrice += itemTotal;
-    discount += itemTotal * 0.20; // 10% discount
+    discount += itemTotal * 0.15; 
     totalItems += item.quantity;
 cartContainer.innerHTML = "";
 
-// Create wrapper div for all items
 let itemsWrapper = document.createElement("div");
-itemsWrapper.className = "cart-items-wrapper"; // new wrapper class
+itemsWrapper.className = "cart-items-wrapper"; 
 
 cartItems.forEach((item, index) => {
   let div = document.createElement("div");
@@ -56,7 +55,6 @@ cartContainer.appendChild(itemsWrapper);
   }
 }
 
-// Increase quantity
 function increaseQuantity(index) {
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
   cart[index].quantity += 1;
@@ -64,7 +62,6 @@ function increaseQuantity(index) {
   renderCart();
 }
 
-// Decrease quantity
 function decreaseQuantity(index) {
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
   if (cart[index].quantity > 1) {
@@ -76,7 +73,6 @@ function decreaseQuantity(index) {
   renderCart();
 }
 
-// Remove item
 function removeItem(index) {
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
   cart.splice(index, 1);
@@ -84,12 +80,10 @@ function removeItem(index) {
   renderCart();
 }
 
-// Checkout function
 function checkout() {
   alert("Proceeding to checkout...");
 }
 
-// Run when page loads
 window.onload = renderCart;
 
 

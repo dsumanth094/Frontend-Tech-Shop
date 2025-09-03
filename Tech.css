@@ -1,12 +1,12 @@
 body{
     overflow-x: hidden;
     background-color: black;
-}
+
+/* Header Start */
 .header1 header {
     display: grid;
     grid-template-columns: 35% 65%;
     position: fixed;
-    /* margin-bottom: 50px; */
 }
 .header1{
     padding-top: 20px;
@@ -24,6 +24,9 @@ nav a{
     text-decoration: none;
     color: white;
 }
+/* Header End */
+
+/* About Start */
 .cart-link {
     position: relative;
     display: inline-block;
@@ -83,15 +86,14 @@ nav a{
   margin-left: 800px; 
   margin-top: -400px;
 }
-
-/* Title */
+/* About End */
+/* Feature Start */
 .head {
   text-align: center;
   margin-top: 5rem;
   color: white;
 }
 
-/* Wrapper */
 .carousel-wrapper {
   position: relative;
   width: 100%;
@@ -100,14 +102,12 @@ nav a{
   padding: 40px 0;
 }
 
-/* Track */
 .feature {
   display: flex;
   transition: transform 0.5s ease-in-out;
   will-change: transform;
 }
 
-/* Each product card */
 .feature1 {
   flex: 0 0 20%;
   display: flex;
@@ -123,26 +123,22 @@ nav a{
   transform: scale(1.2);
 }
 
-/* Product name */
 .feature1 p {
   color: white;
   margin-bottom: 10px;
 }
 
-/* Price */
 .feature1 .price {
   color: white;
   margin-top: 15px;
 }
 
-/* Product image */
 .feature1 .image {
   border-radius: 50%;
   object-fit: cover;
   transition: transform 0.3s ease;
 }
 
-/* Different sizes */
 .feature1:nth-child(1) .image,
 .feature1:nth-child(5) .image {
   width: 8vw;
@@ -160,7 +156,6 @@ nav a{
   height: 15vw;
 }
 
-/* Buttons */
 .carousel-btn {
   position: absolute;
   top: 50%;
@@ -195,9 +190,7 @@ nav a{
     justify-content: center;
     margin-top: 70px;
 }
-/* .sidehead:hover{
-    
-} */
+
 .sidehead1{
     border: 2px solid red;
     height: 30px;

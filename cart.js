@@ -1,3 +1,4 @@
+// Add to Cart Function Start
 function renderCart() {
   let cartItems = JSON.parse(localStorage.getItem("cart")) || [];
   let cartContainer = document.getElementById("cartContainer");
@@ -6,14 +7,14 @@ function renderCart() {
   let originalPrice = 0;
   let discount = 0;
   let totalItems = 0;
-
-  cartItems.forEach((item, index) => {
+// Item Price Calculate
+cartItems.forEach((item, index) => {
     let itemTotal = item.price * item.quantity;
     originalPrice += itemTotal;
     discount += itemTotal * 0.15; 
     totalItems += item.quantity;
 cartContainer.innerHTML = "";
-
+// items added with structure
 let itemsWrapper = document.createElement("div");
 itemsWrapper.className = "cart-items-wrapper"; 
 
@@ -36,7 +37,9 @@ cartItems.forEach((item, index) => {
 
 cartContainer.appendChild(itemsWrapper);
 
-  });
+});
+ 
+//  Summary Price Caluculate
 
   if (cartItems.length > 0) {
     let finalTotal = originalPrice - discount;
@@ -85,6 +88,3 @@ function checkout() {
 }
 
 window.onload = renderCart;
-
-
-

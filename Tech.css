@@ -1,7 +1,7 @@
 body{
     overflow-x: hidden;
     background-color: black;
-
+}
 /* Header Start */
 .header1 header {
     display: grid;

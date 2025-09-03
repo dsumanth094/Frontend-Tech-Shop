@@ -1,3 +1,4 @@
+// products page start
 function filterProducts(category) {
     let items = document.querySelectorAll('.item-list');
     let buttons = document.querySelectorAll('.sidehead button');
@@ -18,32 +19,21 @@ function filterProducts(category) {
 
 
 function addToCart(name, description, price, image) {
-    // Get cart from localStorage
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
-
-    // Check if item already exists
     let existingItem = cart.find(item => item.name === name);
     if (existingItem) {
         existingItem.quantity += 1;
     } else {
         cart.push({ name, description, price, image, quantity: 1 });
     }
-
-    // Save back to localStorage
     localStorage.setItem('cart', JSON.stringify(cart));
-
-    // Update button style
     let btn = event.target;
     btn.innerText = "Added";
     btn.style.backgroundColor = "blue";
     btn.style.color = "white";
     btn.style.pointerEvents = "none"; 
-
-    // Update cart count icon
     updateCartCount();
 }
-
-// Update cart count function
 function updateCartCount() {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
     let count = cart.reduce((acc, item) => acc + item.quantity, 0);
@@ -52,14 +42,12 @@ function updateCartCount() {
         cartIcon.innerText = count;
     }
 }
-
-// Call this on page load to show correct cart count
 document.addEventListener('DOMContentLoaded', updateCartCount);
 
 
+// Products End
 
-
-
+// About Start
   const track = document.getElementById("carouselTrack");
   const prevBtn = document.querySelector(".carousel-btn.prev");
   const nextBtn = document.querySelector(".carousel-btn.next");
@@ -67,7 +55,7 @@ document.addEventListener('DOMContentLoaded', updateCartCount);
   let index = 0;
   const items = document.querySelectorAll(".feature1");
   const totalItems = items.length;
-  const visibleItems = 3; // how many items visible at once
+  const visibleItems = 3; 
 
   function updateCarousel() {
     const itemWidth = items[0].offsetWidth;
@@ -78,7 +66,7 @@ document.addEventListener('DOMContentLoaded', updateCartCount);
     if (index < totalItems - visibleItems) {
       index++;
     } else {
-      index = 0; // loop back to start
+      index = 0; 
     }
     updateCarousel();
   }
@@ -87,7 +75,7 @@ document.addEventListener('DOMContentLoaded', updateCartCount);
     if (index > 0) {
       index--;
     } else {
-      index = totalItems - visibleItems; // jump to end
+      index = totalItems - visibleItems; 
     }
     updateCarousel();
   }
@@ -95,5 +83,6 @@ document.addEventListener('DOMContentLoaded', updateCartCount);
   nextBtn.addEventListener("click", nextSlide);
   prevBtn.addEventListener("click", prevSlide);
 
-  // autoplay every 3 seconds
-  setInterval(nextSlide, 3000);
+  setInterval(nextSlide, 1000);
+
+  // About End

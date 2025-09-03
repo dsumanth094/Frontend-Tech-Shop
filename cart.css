@@ -1,6 +1,7 @@
 body{
     background-color: black;
 }
+/* Header Start */
 .header2 header {
     display: grid;
     grid-template-columns: 35% 65%;
@@ -31,7 +32,8 @@ nav a{
     text-decoration: none;
     color: white;
 }
-
+/* Header End */
+/* Items Start */
 .cart-items-wrapper{
     margin-top: 100px;
     margin-left: 200px;
@@ -99,7 +101,9 @@ nav a{
 .carts .x {
     margin-top: -125px;
 }
+/* Items End */
 
+/* Summaury Start */
 .cart{
     color: white;
     margin-left: 850px;
@@ -148,8 +152,8 @@ nav a{
 .checkout-btn:hover {
   background-color: red;
 }
-
-
+/* Summary End */
+/* Footer Start */
 .footer{
     margin-bottom: 50px;
     margin-top: 300px;
@@ -228,6 +232,6 @@ nav a{
 }
 .social-icons{
     margin-left: 900px;
-    /* margin-bottom: 80px; */
     margin-top: 10px;
 }
+/* Fotter End */
